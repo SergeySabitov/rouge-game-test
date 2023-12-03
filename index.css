@@ -1,0 +1,67 @@
+* { box-sizing: border-box; }
+body, html { height: 100%; }
+body { background-color: #000000; color: #ffffff; }
+h1 { font-family: "Playfair Display"; font-size: 30px; padding: 10px 0px; margin: 0px; }
+.field-box { border: 10px solid #d0d0d0; float: left; position: relative;}
+.field { position: relative; width: 1200px; height: 720px;}
+.field .tile { position: absolute; width: 30px; height: 30px; background-size: 100%; background-image: url(images/tile-.png); z-index: 5; }
+.field .tileW { position: absolute; background-image: url(images/tile-W.png); width: 30px; height: 30px; }
+.field .tileE { 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    background-image: url(images/tile-E.png);
+    background-size: cover; 
+    z-index: 10; 
+    border-radius: 5px;
+}
+.field .tileP { position: absolute; width: 30px; height: 30px; background-image: url(images/tile-P.png); background-size: cover; z-index: 100; }
+.field .tileHP {    
+    position: absolute; 
+    width: 30px; 
+    height: 30px;  
+    background-image: url(images/tile-HP.png); 
+    background-size: cover; 
+    z-index: 9; 
+}
+.field .tileSW { 
+    position: absolute; 
+    width: 30px; 
+    height: 30px;  
+    background-image: url(images/tile-SW.png); 
+    background-size: cover; 
+    z-index: 9; 
+ }
+.field .tileE .health { background-color: #ff0000; z-index: 11; position: absolute; left: 0px; top: 0px; height: 3px; }
+.field .tileP .health { background-color: #00ff00; z-index: 11; position: absolute; left: 0px; top: 0px; height: 3px;width: 100%; }
+.inventory-box { border: 2px solid #d0d0d0; float: left; }
+.inventory { position: relative; width: 800px; height: 32px; }
+.cl { clear: both; display: block; }
+
+.game-over-box {
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: 300px;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    background-color: rgba(24, 24, 24, 0.91);
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.463);
+    z-index: 100;
+    background-image: url(images/gameOver.jpg);
+    background-size: cover; 
+}
+
+.game-over-box.gameWin {
+    background-image: url(images/gameWin.gif);
+}
+
+.start-over img {
+    position: relative;
+    top: 10px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
